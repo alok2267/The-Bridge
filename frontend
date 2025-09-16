@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlumniConnect - Design Mockup</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .logo-icon {
+            background: white;
+            color: #1a2a6c;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .design-title {
+            text-align: center;
+            margin: 20px 0;
+            color: #1a2a6c;
+        }
+        
+        .design-subtitle {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #666;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .pages-container {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 40px 0;
+        }
+        
+        .page {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            padding: 25px;
+            width: 100%;
+            max-width: 550px;
+        }
+        
+        .page-title {
+            color: #1a2a6c;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #fdbb2d;
+        }
+        
+        .design-element {
+            margin: 25px 0;
+        }
+        
+        .element-title {
+            color: #b21f1f;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .colors {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .color-swatch {
+            width: 80px;
+            height: 80px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 12px;
+            text-align: center;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .primary-color {
+            background: #1a2a6c;
+        }
+        
+        .secondary-color {
+            background: #b21f1f;
+        }
+        
+        .accent-color {
+            background: #fdbb2d;
+            color: #333;
+        }
+        
+        .light-color {
+            background: #f8f9fa;
+            color: #333;
+            border: 1px solid #ddd;
+        }
+        
+        .dark-color {
+            background: #333;
+        }
+        
+        .fonts-demo {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .font-example {
+            padding: 10px;
+            border-radius: 5px;
+            background: #f8f9fa;
+        }
+        
+        .font-heading {
+            font-size: 28px;
+            font-weight: 700;
+        }
+        
+        .font-subheading {
+            font-size: 20px;
+            font-weight: 600;
+        }
+        
+        .font-body {
+            font-size: 16px;
+            font-weight: 400;
+        }
+        
+        .font-caption {
+            font-size: 14px;
+            font-weight: 300;
+        }
+        
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        
+        .btn {
+            padding: 12px 24px;
+            border-radius: 6px;
+            border: none;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary {
+            background: #1a2a6c;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #24388b;
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background: #b21f1f;
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            background: #c42c2c;
+            transform: translateY(-2px);
+        }
+        
+        .btn-accent {
+            background: #fdbb2d;
+            color: #333;
+        }
+        
+        .btn-accent:hover {
+            background: #fdc84d;
+            transform: translateY(-2px);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            color: #1a2a6c;
+            border: 2px solid #1a2a6c;
+        }
+        
+        .btn-outline:hover {
+            background: #1a2a6c;
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .ui-showcase {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+        
+        .search-bar {
+            display: flex;
+            margin-bottom: 20px;
+            max-width: 400px;
+        }
+        
+        .search-input {
+            padding: 12px 16px;
+            border: 1px solid #ddd;
+            border-radius: 6px 0 0 6px;
+            flex-grow: 1;
+            font-size: 16px;
+        }
+        
+        .search-btn {
+            background: #1a2a6c;
+            color: white;
+            border: none;
+            padding: 0 20px;
+            border-radius: 0 6px 6px 0;
+            cursor: pointer;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            padding: 20px;
+            margin: 15px 0;
+            max-width: 400px;
+        }
+        
+        .card-title {
+            font-weight: 600;
+            color: #1a2a6c;
+            margin-bottom: 10px;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            color: #666;
+            border-top: 1px solid #eee;
+        }
+        
+        @media (max-width: 768px) {
+            .pages-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .buttons {
+                justify-content: center;
+            }
+            
+            .colors {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <div class="logo-icon">AC</div>
+                <span>AlumniConnect</span>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <h1 class="design-title">Alumni Portal Design System</h1>
+        <p class="design-subtitle">Design for Digital Platform for Centralized Alumni Data Management and Engagement (SIH25017)</p>
+        
+        <div class="pages-container">
+            <div class="page">
+                <h2 class="page-title">Home Page Design</h2>
+                
+                <div class="design-element">
+                    <h3 class="element-title">Color Scheme</h3>
+                    <div class="colors">
+                        <div class="color-swatch primary-color">
+                            Primary<br>#1A2A6C
+                        </div>
+                        <div class="color-swatch secondary-color">
+                            Secondary<br>#B21F1F
+                        </div>
+                        <div class="color-swatch accent-color">
+                            Accent<br>#FDBB2D
+                        </div>
+                        <div class="color-swatch light-color">
+                            Light<br>#F8F9FA
+                        </div>
+                        <div class="color-swatch dark-color">
+                            Dark<br>#333333
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="design-element">
+                    <h3 class="element-title">Typography</h3>
+                    <div class="fonts-demo">
+                        <div class="font-example">
+                            <div class="font-heading">Poppins Bold - Headings</div>
+                            <p>Perfect for page titles and section headings</p>
+                        </div>
+                        <div class="font-example">
+                            <div class="font-subheading">Poppins SemiBold - Subheadings</div>
+                            <p>Ideal for card titles and important text</p>
+                        </div>
+                        <div class="font-example">
+                            <div class="font-body">Poppins Regular - Body Text</div>
+                            <p>Used for paragraphs and general content</p>
+                        </div>
+                        <div class="font-example">
+                            <div class="font-caption">Poppins Light - Captions</div>
+                            <p>Perfect for labels and secondary information</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="design-element">
+                    <h3 class="element-title">Button Styles</h3>
+                    <div class="buttons">
+                        <button class="btn btn-primary">Primary Action</button>
+                        <button class="btn btn-secondary">Secondary</button>
+                        <button class="btn btn-accent">Accent</button>
+                        <button class="btn btn-outline">Outline</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="page">
+                <h2 class="page-title">Dashboard Design</h2>
+                
+                <div class="design-element">
+                    <h3 class="element-title">UI Components Showcase</h3>
+                    <div class="ui-showcase">
+                        <div class="search-bar">
+                            <input type="text" class="search-input" placeholder="Search alumni...">
+                            <button class="search-btn">Search</button>
+                        </div>
+                        
+                        <div class="card">
+                            <h4 class="card-title">Alumni Profile Card</h4>
+                            <p>Name: John Doe</p>
+                            <p>Class of 2018 | Computer Science</p>
+                            <p>Current: Software Engineer at TechCorp</p>
+                            <button class="btn btn-primary" style="margin-top: 10px;">View Profile</button>
+                        </div>
+                        
+                        <div class="card">
+                            <h4 class="card-title">Event Card</h4>
+                            <p>Annual Alumni Meet 2023</p>
+                            <p>December 15, 2023 | 6:00 PM</p>
+                            <p>College Campus Auditorium</p>
+                            <button class="btn btn-secondary" style="margin-top: 10px;">Register</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="design-element">
+                    <h3 class="element-title">Navigation Elements</h3>
+                    <div class="ui-showcase">
+                        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                            <button class="btn btn-outline">Home</button>
+                            <button class="btn btn-outline">Directory</button>
+                            <button class="btn btn-outline">Events</button>
+                            <button class="btn btn-outline">Jobs</button>
+                            <button class="btn btn-outline">Messages</button>
+                            <button class="btn btn-outline">Profile</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="design-element">
+                    <h3 class="element-title">Form Elements</h3>
+                    <div class="ui-showcase">
+                        <div style="display: flex; flex-direction: column; gap: 15px; max-width: 400px;">
+                            <input type="text" class="search-input" placeholder="Name">
+                            <input type="email" class="search-input" placeholder="Email">
+                            <select class="search-input">
+                                <option>Select Graduation Year</option>
+                                <option>2023</option>
+                                <option>2022</option>
+                                <option>2021</option>
+                            </select>
+                            <button class="btn btn-primary">Save Changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>Designed by XYZ for AlumniConnect Hackathon Project | SIH25017</p>
+            <p>This design includes color scheme, typography, button styles, and UI components for the alumni portal</p>
+        </div>
+    </footer>
+</body>
+</html>
