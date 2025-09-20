@@ -1,0 +1,27 @@
+from flask import Flask, render_template
+from flask_sqlalchemy import SQLAlchemy
+from datetime import datetime
+
+app = Flask(_name_)
+app.config['SQLALCHEMY_DATABASE_URI']="sqllite:////tmp/Todo.db"
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS']= False
+db=SQLAlchemy(app)
+class Todo(db.Model):
+    sno=db.Column(db.Integer, primary_key=True)
+    Title=db.Column(db.String(200), nullable=False)
+    desc=db.Column(db.DateTime, default=datetime.utcnow)
+    def _repr_(self)-> str:
+        return f"{self.sno}-{self.Title}"
+    
+    
+@app.route("/")
+def hello_world():
+    return render_template('index.html')
+    #return "<p>Hello, World!</p>"
+@app.route("/products")
+def products():
+    return "<p>This is products page</p>"
+
+
+if _name=="main_":
+    app.run(debug=True,port=8000)
