@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Login - AlumniConnect</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<!-- Login Page Container -->
+<div id="login-container">
+    <div class="login-header">
+        <!-- Graduation Cap SVG Logo -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M21.822 7.431A1 1 0 0 0 21 7H7.414l2 2H20a1 1 0 0 1 .951 1.317l-3 10A1 1 0 0 1 17 21H3a1 1 0 0 1-.951-1.317l3-10A1 1 0 0 1 6 9h1.586l-2-2H3a1 1 0 0 1-.822-1.569L11.178 3.43A1 1 0 0 1 12 3a1 1 0 0 1 .822.431l10 12zM12 5.618L5.178 9l-3 10H17l3-10H8.822L12 5.618z"/>
+        </svg>
+        <h1>AlumniConnect</h1>
+    </div>
+
+    <!-- Flash messages for login page -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="alert alert-{{ category }}" style="max-width: 730px; margin: 0 auto 20px auto;">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    
+    <div class="login-wrapper">
+        <!-- Universal Login Form -->
+        <div class="login-box" style="max-width: 400px;">
+            <h2>Portal Login</h2>
+            <form method="POST" action="{{ url_for('login') }}">
+                <input type="email" name="email" placeholder="Enter your Email" required />
+                <input type="password" name="password" placeholder="Password" required />
+                <button type="submit" class="btn-primary">Login</button>
+            </form>
+            <div style="margin-top: 15px; font-size: 13px; color: #666;">
+                <p><b>Admin:</b> admin@alumniconnect.com / adminpassword</p>
+                <p><b>Alumni:</b> alumni@alumniconnect.com / alumnipassword</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

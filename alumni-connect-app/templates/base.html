@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- The title will be inherited or overridden by child templates -->
+    <title>{% block title %}AlumniConnect Portal{% endblock %}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <header>
+      <h1>AlumniConnect Portal</h1>
+    </header>
+
+    <div id="mySidebar" class="sidebar">
+      <a href="{{ url_for('home') }}">Home</a>
+      <a href="{{ url_for('events') }}">Events</a>
+      <a href="{{ url_for('profile') }}">Profile</a>
+      <a href="{{ url_for('directory') }}">Alumni Directory</a>
+      <a href="#">Gallery</a>
+      <a href="#">Moments</a>
+      <a href="{{ url_for('logout') }}">Logout</a>
+    </div>
+
+    <button class="openbtn" onclick="toggleSidebar()">☰</button>
+
+    <div id="main">
+        <!-- Flash messages display here -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="flash-messages">
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">{{ message }}</div>
+                {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+
+        <!-- Content from other pages will be injected here -->
+        <div class="container">
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+
+    <!-- Link to the external JavaScript file -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
+

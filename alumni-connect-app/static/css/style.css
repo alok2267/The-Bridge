@@ -1,0 +1,205 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f8f9fa;
+  color: #333;
+  transition: margin-left 0.3s;
+}
+
+/* --- Login Page Styles --- */
+#login-container {
+  display: flex;
+  flex-direction: column; /* Stack header and wrapper */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+  padding: 20px;
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 40px;
+    color: white;
+}
+
+.login-header svg {
+    width: 60px;
+    height: 60px;
+    fill: white;
+    margin-bottom: 10px;
+}
+
+.login-header h1 {
+    margin: 0;
+    font-size: 2.8em;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.login-wrapper {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.login-box {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  width: 100%;
+  max-width: 350px;
+  text-align: center;
+}
+
+.login-box h2 {
+    margin-top: 0;
+    color: #1a2a6c;
+}
+
+/* --- Flash Message Styles --- */
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 14px;
+}
+.alert-success { background-color: #28a745; }
+.alert-danger { background-color: #dc3545; }
+.alert-warning { background-color: #ffc107; color: #333 }
+.alert-info { background-color: #17a2b8; }
+
+
+/* --- Main App Styles --- */
+
+/* Header */
+header {
+  background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+  color: white;
+  padding: 15px;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/* Sidebar */
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.3s;
+  padding-top: 70px; /* Adjusted for fixed header */
+  z-index: 1001;
+}
+
+.sidebar a {
+  padding: 15px 25px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #f1f1f1;
+  display: block;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.sidebar a:hover {
+  background-color: #575757;
+}
+
+/* Hamburger menu */
+.openbtn {
+  font-size: 22px;
+  cursor: pointer;
+  background-color: white;
+  color: #111;
+  padding: 10px 15px;
+  border: none;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  border-radius: 5px;
+  z-index: 1002;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  transition: background 0.2s, color 0.2s;
+}
+
+.openbtn:hover {
+  background-color: #f0f0f0;
+}
+
+/* Main content */
+#main {
+  transition: margin-left 0.3s;
+  padding: 80px 20px 20px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 20px;
+  margin: 20px 0;
+}
+
+input, select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+input[readonly] {
+    background-color: #e9ecef;
+    cursor: not-allowed;
+}
+
+.btn-primary {
+  background: #1a2a6c;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.btn-primary:hover {
+  background: #24388b;
+}
+
+/* Lists */
+.activity-list, .news-list, #alumniList {
+  list-style: none;
+  padding: 0;
+}
+
+.activity-list li, .news-list li, #alumniList li {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+.activity-list li:last-child, .news-list li:last-child, #alumniList li:last-child {
+  border-bottom: none;
+}

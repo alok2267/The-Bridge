@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Alumni Directory - AlumniConnect{% endblock %}
+
+{% block content %}
+<div class="card">
+    <h2>Alumni Directory</h2>
+    <input type="text" id="search" placeholder="Search alumni by name or graduation year..." onkeyup="searchAlumni()" />
+    <ul id="alumniList">
+        {% for person in alumni %}
+            <li>{{ person.name }} - Class of {{ person.grad_year }}</li>
+        {% else %}
+            <li>No alumni found.</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Home - AlumniConnect{% endblock %}
+
+{% block content %}
+<div class="card">
+    <h2>Welcome to AlumniConnect, {{ session.name }}! 🎓</h2>
+    <p>This is your central hub to connect with fellow alumni, discover events, and grow your professional network.</p>
+</div>
+  
+<div class="card">
+    <h2>Recent Activities</h2>
+    <ul class="activity-list">
+      <li>**Dec 10, 2025:** Ravi Kumar (Class of '17) launched his new startup, "InnovateTech."</li>
+      <li>**Dec 8, 2025:** John Doe (Class of '18) shared his insights on AI at the "Future of Tech" summit.</li>
+      <li>**Dec 5, 2025:** Jane Smith (Class of '20) organized a successful networking mixer in Chicago.</li>
+    </ul>
+</div>
+
+<div class="card">
+    <h2>News</h2>
+    <ul class="news-list">
+      <li>**Alumni Spotlight:** Meet the alumni who are making an impact in their fields.</li>
+      <li>**Event Recap:** Highlights from the recent career fair and mentorship session.</li>
+      <li>**Campus Update:** New initiatives and projects happening on campus.</li>
+    </ul>
+</div>
+{% endblock %}
